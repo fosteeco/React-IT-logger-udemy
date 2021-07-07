@@ -81,3 +81,5 @@ npm i moment react-moment
 ```
 
 React moment allows us to format the date. We use it in the LogItem.js component. We also created a preloader.
+
+##
