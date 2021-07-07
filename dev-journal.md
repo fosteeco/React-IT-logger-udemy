@@ -69,3 +69,15 @@ The icons for materialize were added to the index.html . Removed a lot of the re
 Setup the searchbar with materialize: https://materializecss.com/navbar.html
 
 Logs.js is a component that gets data from the backend using the fetch command that is built in to javascript.
+
+## 78. LogItem & Preloader Components
+
+LogItem takes in a log as a prop and creates a nice looking list item.
+
+Installled moment and react-moment
+
+```
+npm i moment react-moment
+```
+
+React moment allows us to format the date. We use it in the LogItem.js component. We also created a preloader.

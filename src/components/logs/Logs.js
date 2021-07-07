@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import LogItem from "./LogItem";
+import Preloader from "../layout/Preloader";
 /* Storing logs in component level state later on moving it into redux */
 
 const Logs = () => {
@@ -21,18 +23,19 @@ const Logs = () => {
   };
   if (loading) {
     /* Going to use materialize preloader */
-    return <h4>Loading...</h4>;
+    return <Preloader />;
   }
+
   /* Using collection, like a list group from bootstrap */
   return (
-    <ul className="collection-with-header">
+    <ul className="collection with-header">
       <li className="collection-header">
         <h4 className="center">System Logs</h4>
       </li>
       {!loading && logs.length === 0 ? (
         <p className="center">No logs to show...</p>
       ) : (
-        logs.map((log) => <li>{log.message}</li>)
+        logs.map((log) => <LogItem log={log} key={log.id} />)
       )}
     </ul>
   );
