@@ -44,3 +44,22 @@ Added proxy to package.json:
 ```
 
 For the proxy to take effect you have to restart the server.
+
+## 76. Materialize Setup
+
+Materialize - css framework - https://materializecss.com/getting-started.html
+
+```
+npm install materialize-css
+```
+
+npm keeps complaining about vulnerabilities in 5 packages. Tried fixing it with this : https://github.com/raineorshine/npm-check-updates . Updated all the packages for the project to the latest versions and all the packages on this machine.\
+Delete:
+
+```
+App.test.js
+index.css
+logo.svg
+```
+
+The icons for materialize were added to the index.html . Removed a lot of the react boiler plate
