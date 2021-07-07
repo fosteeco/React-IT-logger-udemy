@@ -63,3 +63,9 @@ logo.svg
 ```
 
 The icons for materialize were added to the index.html . Removed a lot of the react boiler plate
+
+## 77. SearchBar & Logs Component
+
+Setup the searchbar with materialize: https://materializecss.com/navbar.html
+
+Logs.js is a component that gets data from the backend using the fetch command that is built in to javascript.
