@@ -119,3 +119,7 @@ thunk - allows asynchronous actions
 devtools - allopws us to use redux devtools for chrome \
 First thing create a store in src/store.js \
 Redux seems pretty neat. Instead of having multiple contexts for all of our different states we can have one context provider that pulls in all of the contexts from the /src/reducers/index.js file. The dev tools sound pretty powerful too.
+
+## 82. Logs Reducer, Actions & Types
+
+Created the logs reducer in /reducers . Types were also defined in the /actiosns folder. Instead of having a logState like we would have if we weren't using redux we have a logActions.js . Since we are using an asyncronous function fetch to get the logs we are using redux-thunk. The async events will return functions instead of payloads and types. Within those functions is where the dispatch function will deliver the type and payload.
