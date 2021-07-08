@@ -189,3 +189,7 @@ Reminder of Structure: \
 |-->tech property in the object is mapped to the imported tech reducer \
 |--->tech reducer defines the initialState \
 Nice.
+
+## 89. Tech Options Select Component
+
+TechSelectOptions.js was created in components/techs . This component was then implemented in AddLogModal and EditLogModal. It makes the code look really clean doing it this way.
