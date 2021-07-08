@@ -134,3 +134,9 @@ The workflow:
 - Export connect
 - Anything you want to bring in from state do mapStateToProps and bring it in.
 - If you have an action to fire off, bring it in and add it as a second paramter to the connect function
+
+## 84. Add Logs
+
+Adding functionality with redux:
+add action, handle reducer, add it to component.
+Add log implemented.
