@@ -123,3 +123,14 @@ Redux seems pretty neat. Instead of having multiple contexts for all of our diff
 ## 82. Logs Reducer, Actions & Types
 
 Created the logs reducer in /reducers . Types were also defined in the /actiosns folder. Instead of having a logState like we would have if we weren't using redux we have a logActions.js . Since we are using an asyncronous function fetch to get the logs we are using redux-thunk. The async events will return functions instead of payloads and types. Within those functions is where the dispatch function will deliver the type and payload.
+
+## 83. Connecting Redux To a Component
+
+To interact with redux from a component need to bring in something called connect.\
+
+The workflow:
+
+- Bring in connect
+- Export connect
+- Anything you want to bring in from state do mapStateToProps and bring it in.
+- If you have an action to fire off, bring it in and add it as a second paramter to the connect function

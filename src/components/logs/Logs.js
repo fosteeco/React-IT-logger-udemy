@@ -1,27 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
+import { connect } from "react-redux"; /* Connects redux to this component */
 import LogItem from "./LogItem";
+import PropTypes from "prop-types";
 import Preloader from "../layout/Preloader";
+import { getLogs } from "../../actions/logActions";
 /* Storing logs in component level state later on moving it into redux */
 
-const Logs = () => {
-  const [logs, setLogs] = useState([]); /* Empty array by default */
-  const [loading, setLoading] = useState(false); /* Default = false */
-
+const Logs = ({ log: { logs, loading }, getLogs }) => {
   useEffect(() => {
     getLogs();
     // eslint-disable-next-line
   }, []); /* Empty array means it only runs once */
 
-  const getLogs = async () => {
-    setLoading(true);
-    /* don't need localhost:5000 because of proxy defined in packages.json */
-    const res = await fetch("/logs");
-    const data = await res.json();
-
-    setLogs(data);
-    setLoading(false);
-  };
-  if (loading) {
+  if (loading || logs == null) {
     /* Going to use materialize preloader */
     return <Preloader />;
   }
@@ -41,4 +32,12 @@ const Logs = () => {
   );
 };
 
-export default Logs;
+Logs.propTypes = {
+  log: PropTypes.object.isRequired,
+};
+
+const mapStateToProps = (state) => ({
+  log: state.log,
+});
+
+export default connect(mapStateToProps, { getLogs })(Logs);

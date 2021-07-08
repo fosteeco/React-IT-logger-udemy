@@ -13,7 +13,7 @@ import { GET_LOGS, SET_LOADING, LOGS_ERROR } from "./types";
 //   };
 // };
 
-// refactored
+// refactored - Get logs from server
 export const getLogs = () => async (dispatch) => {
   /* Could optionally pass getState */
   try {
