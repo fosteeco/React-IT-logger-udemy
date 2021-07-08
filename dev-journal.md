@@ -102,3 +102,7 @@ Instead we wrote a function inline for all the values passed into the modal. We 
     onChange={(e) => setMessage(e.target.value)}
 />
 ```
+
+## 80. Edit & Tech Modal Components
+
+Implemented modals for techs.
