@@ -193,3 +193,14 @@ Nice.
 ## 89. Tech Options Select Component
 
 TechSelectOptions.js was created in components/techs . This component was then implemented in AddLogModal and EditLogModal. It makes the code look really clean doing it this way.
+
+## 90. Add Technicians
+
+New tech action addTech was added to techActions.js. In there we setup the POST request to the JSON server. This also dispatches ADD_TECH with the newly added tech as the payload to the reducer. The tech is added to the techs array in the reducer's state. \
+We then added the function to the AddTechModal.js. Ran through the process of adding redux state to a component: \
+|->import connect \
+|->import function from actions \
+|->Destructure function from props at beginning of functional component. \
+|->Add proptype requirement for function \
+|->Rewrite export with the connect()() function \
+Then you're good.
