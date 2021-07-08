@@ -163,3 +163,14 @@ Git is pretty cool for this.
 ## 86. Update Logs
 
 Logs can now be updated. The log information can be filled into the edit form with the useEffect hook. We check if current is not null then use our useState methods to fill the form with the information.
+
+## 87. Search Logs
+
+Json server gives us search functionality with ?q=
+here's how it was implemented in our log actions :
+
+```
+const res = await fetch(`/logs?q=${text}`);
+```
+
+That was really easy and way easier than our last implementation of search. We could use this way because in the contact keeper we were working directly in the state while here we are using the JSON server to query instead. Pretty cool stuff.

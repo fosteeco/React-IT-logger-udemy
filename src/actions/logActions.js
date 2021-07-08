@@ -7,6 +7,7 @@ import {
   SET_CURRENT,
   CLEAR_CURRENT,
   UPDATE_LOG,
+  SEARCH_LOGS,
 } from "./types";
 
 // export const getLogs = () => {
@@ -24,7 +25,6 @@ import {
 
 // refactored - Get logs from server
 export const getLogs = () => async (dispatch) => {
-  /* Could optionally pass getState */
   try {
     setLoading();
     const res = await fetch("/logs");
@@ -43,7 +43,6 @@ export const getLogs = () => async (dispatch) => {
 
 // Add new log
 export const addLog = (log) => async (dispatch) => {
-  /* Could optionally pass getState */
   try {
     setLoading();
     const res = await fetch("/logs/", {
@@ -68,7 +67,6 @@ export const addLog = (log) => async (dispatch) => {
 
 // Delete Log
 export const deleteLog = (id) => async (dispatch) => {
-  /* Could optionally pass getState */
   try {
     setLoading();
     const res = await fetch(`/logs/${id}`, {
@@ -88,7 +86,6 @@ export const deleteLog = (id) => async (dispatch) => {
 
 // Update log on server
 export const updateLog = (log) => async (dispatch) => {
-  /* Could optionally pass getState */
   try {
     setLoading();
     const res = await fetch(`/logs/${log.id}`, {
@@ -101,6 +98,24 @@ export const updateLog = (log) => async (dispatch) => {
     const data = await res.json();
     dispatch({
       type: UPDATE_LOG,
+      payload: data,
+    });
+  } catch (error) {
+    dispatch({
+      type: LOGS_ERROR,
+      payload: error.response.data,
+    });
+  }
+};
+
+// Search logs
+export const searchLogs = (text) => async (dispatch) => {
+  try {
+    setLoading();
+    const res = await fetch(`/logs?q=${text}`);
+    const data = await res.json();
+    dispatch({
+      type: SEARCH_LOGS,
       payload: data,
     });
   } catch (error) {
