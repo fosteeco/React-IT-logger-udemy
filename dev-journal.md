@@ -140,3 +140,9 @@ The workflow:
 Adding functionality with redux:
 add action, handle reducer, add it to component.
 Add log implemented.
+
+## 85. Deleting logs
+
+Trying on my own before watching video.
+Think I got it
+My solution is in the myDeleteImplementation branch of this git repo. I passed the log instead of the id into the log delete action. There's no point in doing that so Brad's implementation is better.

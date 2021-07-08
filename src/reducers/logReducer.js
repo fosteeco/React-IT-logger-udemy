@@ -1,5 +1,11 @@
 /* Initial State is set in reducer instead of another file like we did previously with useContext */
-import { GET_LOGS, SET_LOADING, LOGS_ERROR, ADD_LOG } from "../actions/types";
+import {
+  GET_LOGS,
+  SET_LOADING,
+  LOGS_ERROR,
+  ADD_LOG,
+  DELETE_LOG,
+} from "../actions/types";
 const initialState = {
   logs: null,
   current: null,
@@ -19,6 +25,12 @@ export default (state = initialState, action) => {
       return {
         ...state,
         logs: [...state.logs, action.payload],
+        loading: false,
+      };
+    case DELETE_LOG:
+      return {
+        ...state,
+        logs: state.logs.filter((log) => log.id !== action.payload),
         loading: false,
       };
     case SET_LOADING:
