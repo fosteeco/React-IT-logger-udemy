@@ -106,3 +106,16 @@ Instead we wrote a function inline for all the values passed into the modal. We 
 ## 80. Edit & Tech Modal Components
 
 Implemented modals for techs.
+
+## 81. Redux Store & Provider Setup
+
+Installing redux
+
+```
+npm i redux react-redux redux-thunk redux-devtools-extension
+```
+
+thunk - allows asynchronous actions
+devtools - allopws us to use redux devtools for chrome \
+First thing create a store in src/store.js \
+Redux seems pretty neat. Instead of having multiple contexts for all of our different states we can have one context provider that pulls in all of the contexts from the /src/reducers/index.js file. The dev tools sound pretty powerful too.
