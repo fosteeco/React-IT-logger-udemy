@@ -1,11 +1,11 @@
 {
   "logs": [
     {
-      "message": "Crashed entire network",
+      "id": 2,
+      "message": "Crashed entire network f",
       "attention": true,
       "tech": "John Doe",
-      "date": "2021-07-08T15:17:49.977Z",
-      "id": 2
+      "date": "2021-07-08T16:29:52.821Z"
     },
     {
       "message": "Dropped pizza on laptop",
@@ -15,18 +15,18 @@
       "id": 3
     },
     {
+      "id": 4,
       "message": "Sent Computer to wrong address",
-      "attention": false,
+      "attention": true,
       "tech": "John Doe",
-      "date": "2021-07-08T15:18:59.018Z",
-      "id": 4
+      "date": "2021-07-08T16:30:15.794Z"
     },
     {
-      "message": "Joined Webinar",
+      "id": 5,
+      "message": "Joined Webinar from desk",
       "attention": false,
       "tech": "John Doe",
-      "date": "2021-07-08T15:20:01.693Z",
-      "id": 5
+      "date": "2021-07-08T16:34:16.637Z"
     }
   ],
   "techs": [

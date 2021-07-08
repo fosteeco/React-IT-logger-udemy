@@ -145,4 +145,21 @@ Add log implemented.
 
 Trying on my own before watching video.
 Think I got it
-My solution is in the myDeleteImplementation branch of this git repo. I passed the log instead of the id into the log delete action. There's no point in doing that so Brad's implementation is better.
+My solution is in the myDeleteImplementation branch of this git repo. I passed the log instead of the id into the log delete action. There's no point in doing that so Brad's implementation is better. \
+I used git branches to separate what me and Brad did for that section. To go back to that branch I could run:
+
+```
+git checkout myDeleteImplementation
+```
+
+To return to this main branch I do:
+
+```
+git checkout main
+```
+
+Git is pretty cool for this.
+
+## 86. Update Logs
+
+Logs can now be updated. The log information can be filled into the edit form with the useEffect hook. We check if current is not null then use our useState methods to fill the form with the information.
