@@ -6,13 +6,6 @@
       "tech": "John Doe",
       "date": "2021-07-08T15:42:10.534Z",
       "id": 1
-    },
-    {
-      "message": "test3",
-      "attention": false,
-      "tech": "John Doe",
-      "date": "2021-07-08T15:42:19.848Z",
-      "id": 3
     }
   ],
   "techs": [
