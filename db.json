@@ -1,39 +1,18 @@
 {
   "logs": [
     {
-      "message": "Changed network card on server 007",
+      "message": "test1",
       "attention": true,
-      "tech": "Sam Smith",
-      "date": "2021-07-08T15:17:14.660Z",
+      "tech": "John Doe",
+      "date": "2021-07-08T15:42:10.534Z",
       "id": 1
     },
     {
-      "message": "Crashed entire network",
-      "attention": true,
-      "tech": "John Doe",
-      "date": "2021-07-08T15:17:49.977Z",
-      "id": 2
-    },
-    {
-      "message": "Dropped pizza on laptop",
+      "message": "test3",
       "attention": false,
-      "tech": "Sam Smith",
-      "date": "2021-07-08T15:18:42.762Z",
+      "tech": "John Doe",
+      "date": "2021-07-08T15:42:19.848Z",
       "id": 3
-    },
-    {
-      "message": "Sent Computer to wrong address",
-      "attention": false,
-      "tech": "John Doe",
-      "date": "2021-07-08T15:18:59.018Z",
-      "id": 4
-    },
-    {
-      "message": "Joined Webinar",
-      "attention": false,
-      "tech": "John Doe",
-      "date": "2021-07-08T15:20:01.693Z",
-      "id": 5
     }
   ],
   "techs": [

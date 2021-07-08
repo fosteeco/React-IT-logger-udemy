@@ -140,3 +140,7 @@ The workflow:
 Adding functionality with redux:
 add action, handle reducer, add it to component.
 Add log implemented.
+
+## 85. Deleting logs
+
+Trying on my own before watching video.
