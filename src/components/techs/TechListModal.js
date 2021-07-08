@@ -1,26 +1,14 @@
 import React, { useState, useEffect } from "react";
-import LogItem from "../logs/LogItem";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
 import TechItem from "./TechItem";
-/* Storing logs in component level state later on moving it into redux */
+import { getTechs } from "../../actions/techActions";
 
-const TechListModal = () => {
-  const [techs, setTechs] = useState([]); /* Empty array by default */
-  const [loading, setLoading] = useState(false); /* Default = false */
-
+const TechListModal = ({ getTechs, tech: { techs, loading } }) => {
   useEffect(() => {
     getTechs();
     // eslint-disable-next-line
   }, []); /* Empty array means it only runs once */
-
-  const getTechs = async () => {
-    setLoading(true);
-    /* don't need localhost:5000 because of proxy defined in packages.json */
-    const res = await fetch("/techs");
-    const data = await res.json();
-
-    setTechs(data);
-    setLoading(false);
-  };
 
   /* Using collection, like a list group from bootstrap */
   return (
@@ -29,6 +17,7 @@ const TechListModal = () => {
         <h4>Technician List</h4>
         <ul className="collection">
           {!loading &&
+            techs !== null &&
             techs.map((tech) => <TechItem tech={tech} key={tech.id} />)}
         </ul>
       </div>
@@ -36,4 +25,13 @@ const TechListModal = () => {
   );
 };
 
-export default TechListModal;
+TechListModal.propTypes = {
+  tech: PropTypes.object.isRequired,
+  getTechs: PropTypes.func.isRequired,
+};
+
+const mapStateToProps = (state) => ({
+  tech: state.tech,
+});
+
+export default connect(mapStateToProps, { getTechs })(TechListModal);

@@ -174,3 +174,18 @@ const res = await fetch(`/logs?q=${text}`);
 ```
 
 That was really easy and way easier than our last implementation of search. We could use this way because in the contact keeper we were working directly in the state while here we are using the JSON server to query instead. Pretty cool stuff.
+
+## 88. Techs Reducer, Action & Component
+
+Adding new resource:
+
+- Add a reducer
+- Add action
+- Add to components
+
+We added a reducer for the techs. We switched from component level state to the state that we created with the reducer. We had to use mapStateToProps to pull the tech object into the state of TechListModal. \
+Reminder of Structure: \
+|->index.js has an object \
+|-->tech property in the object is mapped to the imported tech reducer \
+|--->tech reducer defines the initialState \
+Nice.
