@@ -204,3 +204,7 @@ We then added the function to the AddTechModal.js. Ran through the process of ad
 |->Add proptype requirement for function \
 |->Rewrite export with the connect()() function \
 Then you're good.
+
+## 91. Delete Technicians
+
+Created a deleteTech action in techActions.js. This action performs a delete request on the /techs/${id} url of our json server. The id is dispatched to the reducer so we can also remove the tech from the front end. Then we added the function to the TechItem.js component.
