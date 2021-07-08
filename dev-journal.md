@@ -144,3 +144,9 @@ Add log implemented.
 ## 85. Deleting logs
 
 Trying on my own before watching video.
+Looking at my implementation there's a few things that I notice.
+
+- The delete method in logActions doesn't need headers passed into the fetch() function.
+- The delete method should take in an ID instead of a log since it only needs the id to delete the log. Then I could've passed the id as the payload to the reducer instead of the whole log.
+- I was correct about adding the functionality to the LogItem. I did pretty well there but I didn't create a function like Brad did. That would make it easier to see what the onClick does and he also included a message about log deleted with M.toast({html: "log deleted"}).
+- Think I did pretty well for doing it on my own
