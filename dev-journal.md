@@ -82,4 +82,23 @@ npm i moment react-moment
 
 React moment allows us to format the date. We use it in the LogItem.js component. We also created a preloader.
 
-##
+## 79. AddBtn & AddLogModal Components
+
+Created the modal with materialize css. We didn't write a single onChange function:
+
+```
+ const onChange = (e) => {
+    setUser({ ...user, [e.target.name]: e.target.value });
+  };
+```
+
+Instead we wrote a function inline for all the values passed into the modal. We did do an onSubmit function where we used materialize to display the warning for us. This part of the app also had it's own state so we used the useState hook. Here's what our on change functions looked like:
+
+```
+<input
+    type="text"
+    name="message"
+    value={message}
+    onChange={(e) => setMessage(e.target.value)}
+/>
+```

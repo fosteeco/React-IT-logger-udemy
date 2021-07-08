@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import M from "materialize-css/dist/js/materialize.min.js";
 /* Need state because it's a form */
 
 const AddLogModal = () => {
@@ -6,7 +7,11 @@ const AddLogModal = () => {
   const [attention, setAttention] = useState(false);
   const [tech, setTech] = useState("");
   const onSubmit = () => {
-    console.log(message, tech, attention);
+    if (message === "" || tech === "") {
+      M.toast({ html: "Please enter a message and tech" });
+    } else {
+      console.log(message, tech, attention);
+    }
   };
   return (
     <div id="add-log-modal" className="modal" style={modalStyle}>
@@ -61,7 +66,7 @@ const AddLogModal = () => {
           <a
             href="#!"
             onClick={onSubmit}
-            className="modal-close waves-effect waves-green btn-flat"
+            className="modal-close waves-effect blue waves-light btn"
           >
             Enter
           </a>
